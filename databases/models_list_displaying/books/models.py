@@ -10,3 +10,8 @@ class Book(models.Model):
 
     def __str__(self):
         return self.name + " " + self.author
+
+
+    @property
+    def datestring(self):
+        return self.pub_date.strftime('%Y-%m-%d')
